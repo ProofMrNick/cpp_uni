@@ -1,4 +1,5 @@
 @echo off
+setlocal EnableDelayedExpansion
 ::
 :: Вид сборки / суффикс в названии каталога сборки
 ::
@@ -21,3 +22,5 @@ cmake -G %BUILD_TYPE% ..\%SOURCE_FOLDER%
 cmake --build .
 
 copy ..\%SOURCE_FOLDER%\oop_practice\run_oop.bat .\oop_practice
+
+copy ..\run_tests.bat
