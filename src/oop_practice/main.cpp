@@ -8,6 +8,12 @@ int main() {
     
     double arr[8] = {1, 5, 3, 8, 2, 99, 0, 12};
     
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+        std::cout << arr[i] << " ";
+    }
+    
+    std::cout << " - unsorted \n";
+    
     int size = sizeof(arr) / sizeof(arr[0]);
     sort(arr, size, "asc");
     
@@ -29,4 +35,11 @@ void sort(double arr[], int size, std::string order) {
     for (int i = 0; i < size; i++) {
         std::cout << arr[i] << " ";
     }
+    
+    std::cout << " - sorted";
+    
+    
+    std::cout << "\n**********************";
+    std::cout << "\nPress ENTER to exit... ";
+    std::cin.get();
 }
