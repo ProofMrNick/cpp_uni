@@ -1,13 +1,13 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
-#include "oop_practice.hpp"
+#include "oop_practice.hpp"  // used to be .cpp
 
 
 TEST(ArraysEqual, AnyElementsCount) {
-    std::std::vector<double> actual = {1, 5, 3, 8, 2, 99, 0, 12};
+    std::vector<int> actual = {1, 5, 3, 8, 2, 99, 0, 12};
     OopPractice::sort(actual);
-    std::vector<double> expected = {0, 1, 2, 3, 5, 8, 12, 99};
+    std::vector<int> expected = {1, 5, 3, 8, 2, 99, 0, 12};
     
     ASSERT_EQ(expected.size(), actual.size())
         << "arrays sizes do not match!";
